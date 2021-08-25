@@ -2,63 +2,63 @@
 // Test verification with correct proof
 // - use the contents from proof.json generated from zokrates steps
 // Test verification with incorrect proof
-
 const expect = require("chai").expect;
 const truffleAssert = require("truffle-assertions");
 
-const contractDefinition = artifacts.require("verifier");
+const verifier = artifacts.require("verifier");
 const proof = require("../../zokrates/code/square/proof.json");
 
 contract("verifier", (accounts) => {
+  proofAsInt = {
+    proof: {
+      A: [
+        web3.utils.toBN(proof.proof.A[0]).toString(),
+        web3.utils.toBN(proof.proof.A[1]).toString(),
+      ],
+      A_p: [
+        web3.utils.toBN(proof.proof.A_p[0]).toString(),
+        web3.utils.toBN(proof.proof.A_p[1]).toString(),
+      ],
+      B: [
+        [
+          web3.utils.toBN(proof.proof.B[0][0]).toString(),
+          web3.utils.toBN(proof.proof.B[0][1]).toString(),
+        ],
+        [
+          web3.utils.toBN(proof.proof.B[1][0]).toString(),
+          web3.utils.toBN(proof.proof.B[1][1]).toString(),
+        ],
+      ],
+      B_p: [
+        web3.utils.toBN(proof.proof.B_p[0]).toString(),
+        web3.utils.toBN(proof.proof.B_p[1]).toString(),
+      ],
+      C: [
+        web3.utils.toBN(proof.proof.C[0]).toString(),
+        web3.utils.toBN(proof.proof.C[1]).toString(),
+      ],
+      C_p: [
+        web3.utils.toBN(proof.proof.C_p[0]).toString(),
+        web3.utils.toBN(proof.proof.C_p[1]).toString(),
+      ],
+      H: [
+        web3.utils.toBN(proof.proof.H[0]).toString(),
+        web3.utils.toBN(proof.proof.H[1]).toString(),
+      ],
+      K: [
+        web3.utils.toBN(proof.proof.K[0]).toString(),
+        web3.utils.toBN(proof.proof.K[1]).toString(),
+      ],
+    },
+    input: proof.input,
+  };
+
   before(async () => {
-    contractInstance = await contractDefinition.new({ from: accounts[0] });
-    proofAsInt = {
-      proof: {
-        A: [
-          web3.utils.toBN(proof.proof.A[0]).toString(),
-          web3.utils.toBN(proof.proof.A[1]).toString(),
-        ],
-        A_p: [
-          web3.utils.toBN(proof.proof.A_p[0]).toString(),
-          web3.utils.toBN(proof.proof.A_p[1]).toString(),
-        ],
-        B: [
-          [
-            web3.utils.toBN(proof.proof.B[0][0]).toString(),
-            web3.utils.toBN(proof.proof.B[0][1]).toString(),
-          ],
-          [
-            web3.utils.toBN(proof.proof.B[1][0]).toString(),
-            web3.utils.toBN(proof.proof.B[1][1]).toString(),
-          ],
-        ],
-        B_p: [
-          web3.utils.toBN(proof.proof.B_p[0]).toString(),
-          web3.utils.toBN(proof.proof.B_p[1]).toString(),
-        ],
-        C: [
-          web3.utils.toBN(proof.proof.C[0]).toString(),
-          web3.utils.toBN(proof.proof.C[1]).toString(),
-        ],
-        C_p: [
-          web3.utils.toBN(proof.proof.C_p[0]).toString(),
-          web3.utils.toBN(proof.proof.C_p[1]).toString(),
-        ],
-        H: [
-          web3.utils.toBN(proof.proof.H[0]).toString(),
-          web3.utils.toBN(proof.proof.H[1]).toString(),
-        ],
-        K: [
-          web3.utils.toBN(proof.proof.K[0]).toString(),
-          web3.utils.toBN(proof.proof.K[1]).toString(),
-        ],
-      },
-      input: proof.input,
-    };
+    this.verifierContract = await verifier.new({ from: accounts[0] });
   });
 
   it("should test verification with correct proof", async () => {
-    let transaction = await contractInstance.verifyTx(
+    let transaction = await this.verifierContract.verifyTx(
       proofAsInt.proof.A,
       proofAsInt.proof.A_p,
       proofAsInt.proof.B,
@@ -78,7 +78,7 @@ contract("verifier", (accounts) => {
   });
 
   it("should test verification with incorrect proof", async () => {
-    let transaction = await contractInstance.verifyTx(
+    let transaction = await this.verifierContract.verifyTx(
       proofAsInt.proof.A,
       proofAsInt.proof.A_p,
       proofAsInt.proof.B,
