@@ -47,7 +47,9 @@ This project consists in a decentralized application (DApp) for property claim b
   ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 ```
 
-3. Compile, migrate and test the contracts with truffle (on a separate console). It will use the previously up and running ganache locally blockchain. Remember that the contracts are inside **./eth-contracts**:
+3. Compile, migrate and test the contracts with truffle (on a separate console). It will use the previously up and running ganache locally blockchain. Remember that the contracts are inside **./eth-contracts**.
+
+**Important**: I would suggest re-running ganache-cli if you are having trouble to migrate the contracts, so that ganache reset the network, all the gas used, and else, because it does help sometimes.
 
 ```powershell
   truffle compile

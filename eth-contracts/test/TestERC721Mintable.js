@@ -18,10 +18,6 @@ contract("TestERC721Mintable", (accounts) => {
         }
       );
 
-      // this.drk = await ERC721MintableComplete.new("Draco", "DRK", {
-      //   from: account_two,
-      // });
-
       await this.polarisContract.mint(account_two, 0, { from: account_two });
       await this.polarisContract.mint(account_two, 1, { from: account_two });
       await this.polarisContract.mint(account_two, 2, { from: account_two });
