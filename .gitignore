@@ -77,3 +77,4 @@ typings/
 /package-lock.json
 /eth-contracts/build
 /yarn.lock
+/.secret

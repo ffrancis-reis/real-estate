@@ -17,7 +17,7 @@ This project consists in a decentralized application (DApp) for property claim b
 ### Getting Started
 
 1. Clone this repository.
-2. Install the dependencies with [NodeJS](https://nodejs.org/en/) and NPM.
+2. Install the dependencies with [NodeJS](https://nodejs.org/en/) and NPM, and also install [Docker](https://www.docker.com/) to manage containers (needed for ZoKrates).
 3. Test the application making calls to the contract on the [Rinkeby Test Network](https://rinkeby.etherscan.io/).
 4. Take a look at the transactions happening on the Rinkeby Test Network at [Etherscan](https://rinkeby.etherscan.io/) explorer.
 
@@ -28,6 +28,8 @@ This project consists in a decentralized application (DApp) for property claim b
 3. Create an [Infura](https://infura.io/) account to publish the contracts into the [Rinkeby Test Network](https://rinkeby.etherscan.io/).
 4. Install [Truffle](https://www.trufflesuite.com/truffle) CLI. Truffle is the most popular development framework for Ethereum.
 5. Use this passphrase with [Ganache](https://www.trufflesuite.com/ganache) command as a suggestion _"candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"_. Ganache is part of the Truffle suite that you can use to run a personal Ethereum blockchain.
+6. Verify the contract with [ZoKrates](https://zokrates.github.io/). ZoKrates is a toolbox for zkSNARKs on Ethereum that helps you by generating verifiable computation proofs in Solidity from your DApp.
+7. Mint tokens using [MyEtherWallet](https://www.myetherwallet.com/) and verify the tokens on [OpenSea](https://opensea.io/) marketplace.
 
 **Important**: You will need your personal passphrase from your Ethereum account to publish into the Rinkeby Test Network, hence the **.secret** file in the **truffle-config.js**, even tough being a test network.
 
@@ -47,7 +49,7 @@ This project consists in a decentralized application (DApp) for property claim b
   ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 ```
 
-3. Compile, migrate and test the contracts with truffle (on a separate console). It will use the previously up and running ganache locally blockchain. Remember that the contracts are inside **./eth-contracts**.
+3. Compile, migrate and test the contracts with truffle (on a separate console). It will use the previously up and running ganache locally blockchain. Remember that the contracts are inside **./eth-contracts**. You can either test with a specific test file or just test all of them.
 
 **Important**: I would suggest re-running ganache-cli if you are having trouble to migrate the contracts, so that ganache reset the network, all the gas used, and else, because it does help sometimes.
 
@@ -55,21 +57,37 @@ This project consists in a decentralized application (DApp) for property claim b
   truffle compile
   truffle migrate
   truffle test ./test/TestERC721Mintable.js
+  truffle test
 ```
 
-4. Publish the contracts into the Rinkeby Test Network with your Infura key:
+4. Implement Zokrates to verify proof. By running the command below Docker wil install ZoKrates 0.3.0 version and open it's shell to generate the proof flow:
+
+```powershell
+  docker run -v [project folder]:/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
+```
+
+Inside ZoKrates shell run the commands below. Get on the square.code folder, compile and work on the flow untill you export the verifier. You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js** files to prove ZoKrates verifiable computation.
+
+```powershell
+  truffle test ./test/TestSquareVerifier.js
+  truffle test ./test/TestSolnSquareVerifier.js
+  truffle test
+```
+
+```powershell
+  cd code/zokrates/code/square
+  ~/zokrates compile -i square.code
+  ~/zokrates setup
+  ~/zokrates compute-witness -a 3 9
+  ~/zokrates generate-proof
+  ~/zokrates export-verifier
+```
+
+5. Publish the contracts into the Rinkeby Test Network with your Infura key:
 
 ```powershell
   truffle migrate --reset --network rinkeby
 ```
-
-5. Check out and test the DApp in the frontend with the command below. You can run on the ganache-cli window, since Ganache was only for testing purpose.
-
-```powershell
-  npm run dev
-```
-
-**Important**: As a reminder, the frontend of the application will interact with the contract on the [Rinkeby Test Network](https://rinkeby.etherscan.io/), not with the pre-built accounts and deployed contracts made by the Ganache suite, as you can see in the [browser's developer console](https://support.airtable.com/hc/en-us/articles/232313848-How-to-open-the-developer-console#:~:text=To%20open%20the%20developer%20console%20window%20on%20Chrome%2C%20use%20the,then%20select%20%22Developer%20Tools.%22).
 
 ### Output
 
@@ -77,5 +95,6 @@ Here is an example of the smart contract in the blockchain and the transactions 
 
 Etherscan info:
 
-- Transaction ID: [**0x6b3dc37663772515e0464098be314717e109ccdfb882725ce65432161d8e4404**](https://rinkeby.etherscan.io/tx/0x6b3dc37663772515e0464098be314717e109ccdfb882725ce65432161d8e4404)
-- Contract: [**0xcf5a7edb0a5967acab9b81eb06c021b81b9ce1af**](https://rinkeby.etherscan.io/address/0xcf5a7edb0a5967acab9b81eb06c021b81b9ce1af)
+- Transaction ID: [**0x55e5601258cd5949fa231a7658777baf6bd6c35906ea6ce667a08b8170be4281**](https://rinkeby.etherscan.io/tx/0x55e5601258cd5949fa231a7658777baf6bd6c35906ea6ce667a08b8170be4281)
+- Contract: [**0xd17eb6e75a6A67B0D00d2572bd3b0045CF71bafa**](https://rinkeby.etherscan.io/address/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa)
+- ABI: **./abi.json**
