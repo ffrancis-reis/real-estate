@@ -66,13 +66,7 @@ This project consists in a decentralized application (DApp) for property claim b
   docker run -v [project folder]:/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
 ```
 
-Inside ZoKrates shell run the commands below. Get on the square.code folder, compile and work on the flow untill you export the verifier. You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js** files to prove ZoKrates verifiable computation.
-
-```powershell
-  truffle test ./test/TestSquareVerifier.js
-  truffle test ./test/TestSolnSquareVerifier.js
-  truffle test
-```
+Inside ZoKrates shell run the commands below. Get on the square.code folder, compile and work on the flow untill you export the verifier.
 
 ```powershell
   cd code/zokrates/code/square
@@ -81,6 +75,14 @@ Inside ZoKrates shell run the commands below. Get on the square.code folder, com
   ~/zokrates compute-witness -a 3 9
   ~/zokrates generate-proof
   ~/zokrates export-verifier
+```
+
+You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js** files to prove ZoKrates verifiable computation.
+
+```powershell
+  truffle test ./test/TestSquareVerifier.js
+  truffle test ./test/TestSolnSquareVerifier.js
+  truffle test
 ```
 
 5. Publish the contracts into the Rinkeby Test Network with your Infura key:
