@@ -77,6 +77,10 @@ Inside ZoKrates shell run the commands below. Get on the square.code folder, com
   ~/zokrates export-verifier
 ```
 
+![image](https://user-images.githubusercontent.com/29313947/131013258-fff46af0-ce64-4150-9b65-a2bf6e4e8741.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131013461-2b65f6b2-f494-4caa-b0ea-dabc3e275144.png)
+
 You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js** files to prove ZoKrates verifiable computation.
 
 ```powershell
@@ -95,10 +99,38 @@ You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js
 
 ### Output
 
-Here is an example of the smart contract in the blockchain and the transactions on Rinkeby:
+Here is an example of the smart contract in the blockchain and the transactions on Rinkeby. You can see the contract ABI on **./abi.json**.
 
 Etherscan info:
 
-- Transaction ID: [**0x55e5601258cd5949fa231a7658777baf6bd6c35906ea6ce667a08b8170be4281**](https://rinkeby.etherscan.io/tx/0x55e5601258cd5949fa231a7658777baf6bd6c35906ea6ce667a08b8170be4281)
+- Transaction: [**0x4aa191ef9227cf254006b23e66a5c058f0418e8fcfc83e3feecea238c40b9cf6**](https://rinkeby.etherscan.io/tx/0x4aa191ef9227cf254006b23e66a5c058f0418e8fcfc83e3feecea238c40b9cf6)
+
+![image](https://user-images.githubusercontent.com/29313947/131010995-57008276-6dd1-4993-8fbc-57b5997d4f04.png)
+
+- Token: [**0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa**](https://rinkeby.etherscan.io/token/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa?a=1)
+
+![image](https://user-images.githubusercontent.com/29313947/131011036-650df4bc-401f-41d9-8bc5-937ee92ab4e3.png)
+
+- Token at OpenSea: [**0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa**](https://testnets.opensea.io/assets/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa/1)
+
+![image](https://user-images.githubusercontent.com/29313947/131011332-87d18f25-639b-4fc6-9155-a374a2befc30.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011384-8cd2a2d4-8e55-44b2-8389-fdab75950e11.png)
+
+- Selling process:
+
+![image](https://user-images.githubusercontent.com/29313947/131011449-7ee2023b-48e2-4f54-8445-e2b6e13bc708.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011496-fa7b4fd6-f615-4fb6-8750-e226fe46e5e0.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011526-b9adc30a-8607-4002-a736-62f5314d8d1d.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011556-6217f277-a314-4a7c-9582-f51f0325a1fe.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011582-bf8678b7-0100-45fa-a59d-0bf28a0c5509.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131011862-4bc0ad16-96e9-4b78-8b65-3e32e1a6e742.png)
+
 - Contract: [**0xd17eb6e75a6A67B0D00d2572bd3b0045CF71bafa**](https://rinkeby.etherscan.io/address/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa)
-- ABI: **./abi.json**
+
+![image](https://user-images.githubusercontent.com/29313947/131011785-80cda093-c8ca-44af-9cc2-47c5b808c32a.png)
