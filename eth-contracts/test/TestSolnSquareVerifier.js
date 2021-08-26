@@ -3,7 +3,7 @@
 const expect = require("chai").expect;
 const truffleAssert = require("truffle-assertions");
 
-const verifier = artifacts.require("verifier");
+const Verifier = artifacts.require("Verifier");
 const SolnSquareVerifier = artifacts.require("SolnSquareVerifier");
 const proof = require("../../zokrates/code/square/proof.json");
 
@@ -54,9 +54,9 @@ contract("SolnSquareVerifier", (accounts) => {
 
   describe("test addSolution", () => {
     before(async () => {
-      this.verifierContract = await verifier.new({ from: accounts[0] });
+      this.VerifierContract = await Verifier.new({ from: accounts[0] });
       this.solnSquareVerifierContract = await SolnSquareVerifier.new(
-        this.verifierContract.address,
+        this.VerifierContract.address,
         "Polaris",
         "POL",
         { from: accounts[0] }
@@ -88,9 +88,9 @@ contract("SolnSquareVerifier", (accounts) => {
 
   describe("test mintNewNft", () => {
     before(async () => {
-      this.verifierContract = await verifier.new({ from: accounts[0] });
+      this.VerifierContract = await Verifier.new({ from: accounts[0] });
       this.solnSquareVerifierContract = await SolnSquareVerifier.new(
-        this.verifierContract.address,
+        this.VerifierContract.address,
         "Polaris",
         "POL",
         { from: accounts[0] }

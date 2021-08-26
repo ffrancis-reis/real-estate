@@ -3,19 +3,6 @@ pragma solidity ^0.5.0;
 import "./ERC721Mintable.sol";
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
-contract Verifier {
-    function verifyTx(
-        uint256[2] memory A,
-        uint256[2] memory A_p,
-        uint256[2][2] memory B,
-        uint256[2] memory B_p,
-        uint256[2] memory C,
-        uint256[2] memory C_p,
-        uint256[2] memory H,
-        uint256[2] memory K,
-        uint256[2] memory input
-    ) public returns (bool r);
-}
 
 // TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class
 // TODO define a solutions struct that can hold an index & an address
@@ -124,4 +111,18 @@ contract SolnSquareVerifier is ERC721MintableComplete {
     //     _solutionsList.push(_solutions[_solutionIndex]);
     //     emit SolutionAdded(_solutionIndex, _solutionAddress);
     // }
+}
+
+contract Verifier {
+    function verifyTx(
+        uint256[2] memory A,
+        uint256[2] memory A_p,
+        uint256[2][2] memory B,
+        uint256[2] memory B_p,
+        uint256[2] memory C,
+        uint256[2] memory C_p,
+        uint256[2] memory H,
+        uint256[2] memory K,
+        uint256[2] memory input
+    ) public returns (bool r);
 }

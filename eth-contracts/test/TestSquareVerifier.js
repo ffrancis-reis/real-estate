@@ -5,10 +5,10 @@
 const expect = require("chai").expect;
 const truffleAssert = require("truffle-assertions");
 
-const verifier = artifacts.require("verifier");
+const Verifier = artifacts.require("Verifier");
 const proof = require("../../zokrates/code/square/proof.json");
 
-contract("verifier", (accounts) => {
+contract("Verifier", (accounts) => {
   proofAsInt = {
     proof: {
       A: [
@@ -54,11 +54,11 @@ contract("verifier", (accounts) => {
   };
 
   before(async () => {
-    this.verifierContract = await verifier.new({ from: accounts[0] });
+    this.VerifierContract = await Verifier.new({ from: accounts[0] });
   });
 
   it("should test verification with correct proof", async () => {
-    let transaction = await this.verifierContract.verifyTx(
+    let transaction = await this.VerifierContract.verifyTx(
       proofAsInt.proof.A,
       proofAsInt.proof.A_p,
       proofAsInt.proof.B,
@@ -78,7 +78,7 @@ contract("verifier", (accounts) => {
   });
 
   it("should test verification with incorrect proof", async () => {
-    let transaction = await this.verifierContract.verifyTx(
+    let transaction = await this.VerifierContract.verifyTx(
       proofAsInt.proof.A,
       proofAsInt.proof.A_p,
       proofAsInt.proof.B,
