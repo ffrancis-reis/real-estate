@@ -85,6 +85,8 @@ You can then test both **TestSquareVerifier.js** and **TestSolnSquareVerifier.js
   truffle test
 ```
 
+![image](https://user-images.githubusercontent.com/29313947/130992978-04f2e7bf-c77d-4e50-b442-a9a2e8e23a39.png)
+
 5. Publish the contracts into the Rinkeby Test Network with your Infura key:
 
 ```powershell
