@@ -113,26 +113,30 @@ Etherscan info:
 
 ![image](https://user-images.githubusercontent.com/29313947/131011036-650df4bc-401f-41d9-8bc5-937ee92ab4e3.png)
 
-- Token at OpenSea: [**0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa**](https://testnets.opensea.io/assets/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa/1)
+- Mint tokens:
 
-![image](https://user-images.githubusercontent.com/29313947/131011332-87d18f25-639b-4fc6-9155-a374a2befc30.png)
+![image](https://user-images.githubusercontent.com/29313947/131042428-843d6a58-3cbd-4cfd-bf4f-1a991f785ba1.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011384-8cd2a2d4-8e55-44b2-8389-fdab75950e11.png)
+**OpenSea Storefront: [https://testnets.opensea.io/konig-estate-marketchain](https://testnets.opensea.io/konig-estate-marketchain)**
 
-- Selling process:
+![image](https://user-images.githubusercontent.com/29313947/131040732-f11e8b21-3cd2-4cb7-a9e9-2a0f6c8ecde0.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011449-7ee2023b-48e2-4f54-8445-e2b6e13bc708.png)
+![image](https://user-images.githubusercontent.com/29313947/131040778-1594d8a4-f1bb-41f1-9361-1c1f7cd91277.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011496-fa7b4fd6-f615-4fb6-8750-e226fe46e5e0.png)
+**One of the estates: [https://testnets.opensea.io/assets/0x052a650b979a8515b15b74ac7de31df8ece532ed/0](https://testnets.opensea.io/assets/0x052a650b979a8515b15b74ac7de31df8ece532ed/0)**
 
-![image](https://user-images.githubusercontent.com/29313947/131011526-b9adc30a-8607-4002-a736-62f5314d8d1d.png)
+**Selling process:**
 
-![image](https://user-images.githubusercontent.com/29313947/131011556-6217f277-a314-4a7c-9582-f51f0325a1fe.png)
+![image](https://user-images.githubusercontent.com/29313947/131048757-c25ae87a-0813-48ec-9d09-8985645814a6.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011582-bf8678b7-0100-45fa-a59d-0bf28a0c5509.png)
+![image](https://user-images.githubusercontent.com/29313947/131048765-60de4e36-6973-4cb8-a6b9-eea556db38e1.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011862-4bc0ad16-96e9-4b78-8b65-3e32e1a6e742.png)
+![image](https://user-images.githubusercontent.com/29313947/131048778-603fdd19-009d-4759-b978-1f28828e8f29.png)
 
-- Contract: [**0xd17eb6e75a6A67B0D00d2572bd3b0045CF71bafa**](https://rinkeby.etherscan.io/address/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa)
+![image](https://user-images.githubusercontent.com/29313947/131048844-6e535995-77eb-411c-87b3-180f2a2c9e11.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131011785-80cda093-c8ca-44af-9cc2-47c5b808c32a.png)
+![image](https://user-images.githubusercontent.com/29313947/131048867-b7aaa258-5a8c-4646-ae21-535de3951b3b.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131048896-312c1edc-0f74-44f4-9269-8c3d6c8bba2f.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131048913-dbc3dccf-0870-458a-a55c-cc5f93f6fae8.png)
