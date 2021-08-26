@@ -49,6 +49,8 @@ This project consists in a decentralized application (DApp) for property claim b
   ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 ```
 
+![image](https://user-images.githubusercontent.com/29313947/131018797-65162a1c-d062-4e4c-bb23-d428e52207e9.png)
+
 3. Compile, migrate and test the contracts with truffle (on a separate console). It will use the previously up and running ganache locally blockchain. Remember that the contracts are inside **./eth-contracts**. You can either test with a specific test file or just test all of them.
 
 **Important**: I would suggest re-running ganache-cli if you are having trouble to migrate the contracts, so that ganache reset the network, all the gas used, and else, because it does help sometimes.
