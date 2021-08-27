@@ -105,15 +105,11 @@ Here is an example of the smart contract in the blockchain and the transactions 
 
 Etherscan info:
 
-- Transaction: [**0x4aa191ef9227cf254006b23e66a5c058f0418e8fcfc83e3feecea238c40b9cf6**](https://rinkeby.etherscan.io/tx/0x4aa191ef9227cf254006b23e66a5c058f0418e8fcfc83e3feecea238c40b9cf6)
+- Transaction: [**0x321308adda40f49f768fd9e4aabd53412609745a6c6a517329493c5ea7c3add9**](https://rinkeby.etherscan.io/tx/0x321308adda40f49f768fd9e4aabd53412609745a6c6a517329493c5ea7c3add9)
 
-![image](https://user-images.githubusercontent.com/29313947/131010995-57008276-6dd1-4993-8fbc-57b5997d4f04.png)
+![image](https://user-images.githubusercontent.com/29313947/131052106-9895fda7-c743-499b-a2e6-3e32cff80c5e.png)
 
-- Token: [**0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa**](https://rinkeby.etherscan.io/token/0xd17eb6e75a6a67b0d00d2572bd3b0045cf71bafa?a=1)
-
-![image](https://user-images.githubusercontent.com/29313947/131011036-650df4bc-401f-41d9-8bc5-937ee92ab4e3.png)
-
-- Mint tokens:
+**Mint tokens:**
 
 ![image](https://user-images.githubusercontent.com/29313947/131042428-843d6a58-3cbd-4cfd-bf4f-1a991f785ba1.png)
 
@@ -137,6 +133,16 @@ Etherscan info:
 
 ![image](https://user-images.githubusercontent.com/29313947/131048867-b7aaa258-5a8c-4646-ae21-535de3951b3b.png)
 
-![image](https://user-images.githubusercontent.com/29313947/131048896-312c1edc-0f74-44f4-9269-8c3d6c8bba2f.png)
-
 ![image](https://user-images.githubusercontent.com/29313947/131048913-dbc3dccf-0870-458a-a55c-cc5f93f6fae8.png)
+
+**Buying process:**
+
+![image](https://user-images.githubusercontent.com/29313947/131050701-f412779e-c31e-4c91-a5c9-ec9470ec9d9a.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131050712-9e95e3f6-43af-4cac-9aac-8e8f098bb8d1.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131050741-a5cc8a72-eba3-4857-b59f-c0ee36a59af7.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131050823-42d10117-05a0-46dd-82d0-180bd0d22a47.png)
+
+![image](https://user-images.githubusercontent.com/29313947/131050929-10258434-cb1d-450a-b72b-2473b2242ec7.png)
